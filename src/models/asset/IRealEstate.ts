@@ -1,0 +1,19 @@
+import { IAssetBase } from './IAsset'
+
+export interface IRealEstate extends IAssetBase {
+  type: RealEstateEnum
+  price: number
+  mortgage: number
+  downPay: number
+  cashFlow: number
+  flats: number
+}
+
+export enum RealEstateEnum {
+  RE_3BR_2BA,
+  RE_2BR_1BA,
+  RE_2PLEX,
+  RE_4PLEX,
+  RE_8PLEX,
+  RE_APARTMENT
+}
