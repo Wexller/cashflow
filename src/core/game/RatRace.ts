@@ -1,7 +1,7 @@
-import { RatRaceEnum } from '../models/race/IRatRace'
-import { LinkedList } from './linked-list/LinkedList'
-import { LinkedListNode } from './linked-list/LinkedListNode'
-import { ratRaceList } from '../const'
+import { RatRaceEnum } from 'models/race/IRatRace'
+import { LinkedList } from '../linked-list/LinkedList'
+import { LinkedListNode } from '../linked-list/LinkedListNode'
+import { ratRaceList } from 'const'
 
 interface RaceField {
   type: RatRaceEnum

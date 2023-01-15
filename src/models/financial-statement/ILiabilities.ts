@@ -6,5 +6,7 @@ export interface ILiabilities {
   schoolLoan: number
   carLoan: number
   creditCard: number
-  realEstateAndBusiness: (IRealEstate | IBusiness)[]
+  retail: number
+  realEstate: IRealEstate[]
+  business: IBusiness[]
 }

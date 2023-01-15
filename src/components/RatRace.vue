@@ -1,6 +1,6 @@
 <script setup>
 import {ratRaceList} from "../const.ts";
-import {RatRace} from "../core/RatRace.ts";
+import {RatRace} from "../core/game/RatRace.ts";
 import {getCurrentInstance} from "vue";
 
 const instance = getCurrentInstance();

@@ -36,7 +36,7 @@
     "ecmaVersion": 11,
     "sourceType": "module"
   },
-  "plugins": ["react", "react-hooks", "@typescript-eslint", "tailwindcss", "unused-imports"],
+  "plugins": ["vue", "@typescript-eslint", "tailwindcss", "unused-imports"],
   "rules": {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",

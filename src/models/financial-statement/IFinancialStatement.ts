@@ -12,4 +12,5 @@ export interface IFinancialStatement {
   expenses: IExpenses
   assets: IAssets
   liabilities: ILiabilities
+  getPayday(): number
 }
