@@ -1,16 +1,16 @@
-import { IAssets } from './IAssets'
-import { IIncomes } from './IIncomes'
-import { IExpenses } from './IExpenses'
-import { ILiabilities } from './ILiabilities'
+import { IAssets } from './IAssets';
+import { IExpenses } from './IExpenses';
+import { IIncomes } from './IIncomes';
+import { ILiabilities } from './ILiabilities';
 
 export interface IFinancialStatement {
-  professionName: string
+  assets: IAssets,
+  expenses: IExpenses,
+  getPayday(): number,
+  incomes: IIncomes,
+  liabilities: ILiabilities,
+  payday: number,
+  professionName: string,
+  totalExpenses: number,
   totalIncome: number
-  totalExpenses: number
-  payday: number
-  incomes: IIncomes
-  expenses: IExpenses
-  assets: IAssets
-  liabilities: ILiabilities
-  getPayday(): number
 }

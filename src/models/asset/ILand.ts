@@ -1,11 +1,11 @@
-import { IAssetBase } from './IAsset'
+import { IAssetBase } from './IAsset';
 
 export interface ILand extends IAssetBase {
-  type: LandEnum
-  price: number
+  cashFlow: number,
+  downPay: number,
   mortgage: number
-  downPay: number
-  cashFlow: number
+  price: number,
+  type: LandEnum
 }
 
 export enum LandEnum {

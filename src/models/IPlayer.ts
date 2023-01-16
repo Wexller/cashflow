@@ -1,10 +1,10 @@
-import { IFinancialStatement } from './financial-statement/IFinancialStatement'
+import { IFinancialStatement } from './financial-statement/IFinancialStatement';
 
 export interface IPlayer {
-  financialStatement: IFinancialStatement
-  maxDices: number
-  rollTheDice(): void
-  borrowMoney(amount: number): void
-  repayMoney(amount: number): void
-  endTurn(): void
+  borrowMoney(amount: number): void;
+  endTurn(): void;
+  financialStatement: IFinancialStatement;
+  maxDices: number;
+  repayMoney(amount: number): void;
+  rollTheDice(numberOfDices: number): void;
 }

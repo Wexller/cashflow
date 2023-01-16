@@ -1,13 +1,13 @@
 export interface IExpenses {
-  taxes: number
-  homeMortgage: number
-  schoolLoan: number
-  carLoan: number
-  creditCard: number
-  retail: number
-  otherExpenses: number
-  perChildExpense: number
-  loan: number | null
+  carLoan: number,
+  creditCard: number,
+  getTotalExpenses(): number,
+  homeMortgage: number,
+  loan: number | null,
+  otherExpenses: number,
+  perChildExpense: number,
+  retail: number,
+  schoolLoan: number,
 
-  getTotalExpenses(): number
+  taxes: number
 }

@@ -1,8 +1,8 @@
 export interface IDoodads {
-  title: string
-  description: string
-  shortTitle?: string
+  description: string,
+  downPayment?: number,
+  forChild?: boolean,
+  shortTitle?: string,
+  title: string,
   worth: number
-  forChild?: boolean
-  downPayment?: number
 }

@@ -1,6 +1,6 @@
-import { RatRaceEnum } from './models/race/IRatRace'
+import { RatRaceEnum } from '@/models/race/IRatRace';
 
-export const ratRaceList: { type: RatRaceEnum; idx: number }[] = [
+export const ratRaceList: { idx: number; type: RatRaceEnum }[] = [
   RatRaceEnum.OPPORTUNITY,
   RatRaceEnum.DOODADS,
   RatRaceEnum.OPPORTUNITY,
@@ -14,5 +14,15 @@ export const ratRaceList: { type: RatRaceEnum; idx: number }[] = [
   RatRaceEnum.OPPORTUNITY,
   RatRaceEnum.BABY,
   RatRaceEnum.OPPORTUNITY,
-  RatRaceEnum.DOWNSIZE
-].map((type, idx) => ({ idx, type }))
+  RatRaceEnum.PAYCHECK,
+  RatRaceEnum.OPPORTUNITY,
+  RatRaceEnum.MARKET,
+  RatRaceEnum.OPPORTUNITY,
+  RatRaceEnum.DOODADS,
+  RatRaceEnum.OPPORTUNITY,
+  RatRaceEnum.DOWNSIZE,
+  RatRaceEnum.OPPORTUNITY,
+  RatRaceEnum.PAYCHECK,
+  RatRaceEnum.OPPORTUNITY,
+  RatRaceEnum.MARKET,
+].map((type, idx) => ({ idx, type }));

@@ -1,30 +1,36 @@
-import { RatRaceEnum } from 'models/race/IRatRace'
-import { LinkedList } from '../linked-list/LinkedList'
-import { LinkedListNode } from '../linked-list/LinkedListNode'
-import { ratRaceList } from 'const'
+import { ratRaceList } from '@/const';
+import { RatRaceEnum } from '@/models/race/IRatRace';
+import { LinkedList } from '../linked-list/LinkedList';
+import { LinkedListNode } from '../linked-list/LinkedListNode';
 
 interface RaceField {
-  type: RatRaceEnum
-  idx: number
+  idx: number;
+  type: RatRaceEnum;
 }
 
 export class RatRace {
-  raceList: LinkedList<RaceField>
-  current: LinkedListNode<RaceField> | null
+  raceList: LinkedList<RaceField>;
+  current: LinkedListNode<RaceField> | null;
 
   constructor() {
-    this.raceList = new LinkedList<RaceField>(true)
-    this.raceList.fromArray(ratRaceList)
-    this.current = this.raceList.head
+    this.raceList = new LinkedList<RaceField>(true);
+    this.raceList.fromArray(ratRaceList);
+    this.current = this.raceList.head;
   }
 
-  next(step = 1): void {
-    if (!this.current || !this.current.next) return
+  next(step = 1): LinkedListNode<RaceField> | null {
+    if (!this.current || !this.current.next) {
+      return this.current;
+    }
 
     for (let i = 0; i < step; i++) {
-      if (!this.current) continue
+      if (!this.current) {
+        continue;
+      }
 
-      this.current = this.current.next
+      this.current = this.current.next;
     }
+
+    return this.current;
   }
 }

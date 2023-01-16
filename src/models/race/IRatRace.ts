@@ -1,8 +1,8 @@
-import { IBaseRace } from './IBaseRace'
+import { IBaseRace } from './IBaseRace';
 
 export interface IRatRace extends IBaseRace {
+  next: IRatRace,
   type: RatRaceEnum
-  next: IRatRace
 }
 
 export enum RatRaceEnum {

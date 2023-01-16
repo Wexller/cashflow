@@ -1,12 +1,12 @@
-import { IRealEstate } from '../asset/IRealEstate'
-import { IBusiness } from '../asset/IBusiness'
+import { IBusiness } from '../asset/IBusiness';
+import { IRealEstate } from '../asset/IRealEstate';
 
 export interface ILiabilities {
-  homeMortgage: number
+  business: IBusiness[],
+  carLoan: number,
+  creditCard: number,
+  homeMortgage: number,
+  realEstate: IRealEstate[],
+  retail: number,
   schoolLoan: number
-  carLoan: number
-  creditCard: number
-  retail: number
-  realEstate: IRealEstate[]
-  business: IBusiness[]
 }

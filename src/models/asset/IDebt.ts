@@ -1,8 +1,8 @@
-import { IAssetBase } from './IAsset'
+import { IAssetBase } from './IAsset';
 
 export interface IDebt extends IAssetBase {
+  amount: number,
   type: DebtEnum
-  amount: number
 }
 
 export enum DebtEnum {

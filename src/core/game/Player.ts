@@ -1,12 +1,20 @@
-export class Player {
-  financialStatement: unknown
-  maxDices: number = 1
+import { FinancialStatement } from '@/core/game/financial-statemtnt/FinancialStatement';
+import { profession } from '@/mock/profession';
+import { IPlayer } from '@/models/IPlayer';
 
-  rollTheDice(numberOfDices: number) {}
+export class Player implements IPlayer {
+  financialStatement: FinancialStatement;
+  maxDices = 1;
 
-  borrowMoney(amount: number) {}
+  constructor() {
+    this.financialStatement = new FinancialStatement(profession);
+  }
 
-  repayMoney(amount: number) {}
+  rollTheDice(numberOfDices: number): void {}
 
-  endTurn() {}
+  borrowMoney(amount: number): void {}
+
+  repayMoney(amount: number): void {}
+
+  endTurn(): void {}
 }

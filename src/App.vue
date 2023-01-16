@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import RatRace from "./components/RatRace.vue";
+import RatRace from './components/URatRace.vue';
 </script>
 
 <template>
-  <RatRace />
+  <rat-race />
 </template>

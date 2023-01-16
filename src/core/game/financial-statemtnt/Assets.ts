@@ -1,10 +1,10 @@
-import { IAssets } from 'models/financial-statement/IAssets'
+import { IAssets } from '@/models/financial-statement/IAssets';
 
 export class Assets implements IAssets {
-  preciousMetals = []
-  stocks = []
-  realEstate = []
-  business = []
+  preciousMetals = [];
+  stocks = [];
+  realEstate = [];
+  business = [];
 
   constructor(public savings = 0) {}
 }

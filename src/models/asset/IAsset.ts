@@ -1,15 +1,15 @@
-import { IRealEstate, RealEstateEnum } from './IRealEstate'
-import { IBusiness } from './IBusiness'
-import { IPreciousMetal } from './IPreciousMetal'
-import { ILand } from './ILand'
-import { IStock } from './IStock'
-import { IInterest } from './IInterest'
-import { IDebt } from './IDebt'
+import { IBusiness } from './IBusiness';
+import { IDebt } from './IDebt';
+import { IInterest } from './IInterest';
+import { ILand } from './ILand';
+import { IPreciousMetal } from './IPreciousMetal';
+import { IRealEstate } from './IRealEstate';
+import { IStock } from './IStock';
 
 export interface IAssetBase {
-  title: string
-  description: string
-  shortTitle?: string
+  description: string;
+  shortTitle?: string;
+  title: string;
 }
 
 export type AssetType =
@@ -19,4 +19,4 @@ export type AssetType =
   | ILand
   | IStock
   | IInterest
-  | IDebt
+  | IDebt;

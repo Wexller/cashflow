@@ -1,10 +1,10 @@
-import { IPriceRange } from './IPriceRange'
-import { IAssetBase } from './IAsset'
+import { IAssetBase } from './IAsset';
+import { IPriceRange } from './IPriceRange';
 
 export interface IStock extends IAssetBase {
-  type: StockTickerEnum
+  currentPrice: number,
   priceRange: IPriceRange
-  currentPrice: number
+  type: StockTickerEnum
 }
 
 export enum StockTickerEnum {

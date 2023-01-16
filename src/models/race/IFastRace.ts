@@ -1,4 +1,4 @@
-import { IBaseRace } from './IBaseRace'
+import { IBaseRace } from './IBaseRace';
 
 export interface IFastRace extends IBaseRace {
   type: FastRaceEnum

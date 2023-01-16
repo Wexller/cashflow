@@ -1,12 +1,12 @@
-import { IPreciousMetal } from '../asset/IPreciousMetal'
-import { IStock } from '../asset/IStock'
-import { IRealEstate } from '../asset/IRealEstate'
-import { IBusiness } from 'models/asset/IBusiness'
+import { IBusiness } from '@/models/asset/IBusiness';
+import { IPreciousMetal } from '@/models/asset/IPreciousMetal';
+import { IRealEstate } from '@/models/asset/IRealEstate';
+import { IStock } from '@/models/asset/IStock';
 
 export interface IAssets {
-  savings: number
-  preciousMetals: IPreciousMetal[]
-  stocks: IStock[]
-  realEstate: IRealEstate[]
-  business: IBusiness[]
+  business: IBusiness[];
+  preciousMetals: IPreciousMetal[];
+  realEstate: IRealEstate[];
+  savings: number;
+  stocks: IStock[];
 }

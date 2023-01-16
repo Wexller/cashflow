@@ -1,6 +1,6 @@
-import { IPlayer } from './IPlayer'
+import { IPlayer } from './IPlayer';
 
 export interface IGame {
+  currentPlayer: IPlayer,
   players: IPlayer[]
-  currentPlayer: IPlayer
 }

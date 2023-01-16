@@ -1,4 +1,4 @@
-import { IFinancialStatementInit } from 'core/game/financial-statemtnt/FinancialStatement'
+import { IFinancialStatementInit } from '@/core/game/financial-statemtnt/FinancialStatement';
 
 export const profession: IFinancialStatementInit = {
   professionName: 'Врач',
@@ -12,13 +12,13 @@ export const profession: IFinancialStatementInit = {
     creditCard: 270,
     retail: 50,
     otherExpenses: 2880,
-    perChildExpense: 640
+    perChildExpense: 640,
   },
   liabilities: {
     homeMortgage: 202000,
     schoolLoan: 150000,
     carLoan: 19000,
     creditCard: 9000,
-    retail: 1000
-  }
-}
+    retail: 1000,
+  },
+};

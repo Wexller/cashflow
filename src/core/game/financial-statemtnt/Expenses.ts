@@ -1,26 +1,26 @@
-import { IExpenses } from 'models/financial-statement/IExpenses'
+import { IExpenses } from '@/models/financial-statement/IExpenses';
 
 export interface IExpensesInit {
-  taxes: number
-  homeMortgage: number
-  schoolLoan: number
-  carLoan: number
-  creditCard: number
-  retail: number
-  otherExpenses: number
-  perChildExpense: number
+  carLoan: number;
+  creditCard: number;
+  homeMortgage: number;
+  otherExpenses: number;
+  perChildExpense: number;
+  retail: number;
+  schoolLoan: number;
+  taxes: number;
 }
 
 export class Expenses implements IExpenses {
-  taxes
-  homeMortgage
-  schoolLoan
-  carLoan
-  creditCard
-  retail
-  otherExpenses
-  perChildExpense
-  loan = null
+  taxes;
+  homeMortgage;
+  schoolLoan;
+  carLoan;
+  creditCard;
+  retail;
+  otherExpenses;
+  perChildExpense;
+  loan = null;
 
   constructor({
     taxes,
@@ -30,19 +30,19 @@ export class Expenses implements IExpenses {
     creditCard,
     retail,
     otherExpenses,
-    perChildExpense
+    perChildExpense,
   }: IExpensesInit) {
-    this.taxes = taxes
-    this.homeMortgage = homeMortgage
-    this.schoolLoan = schoolLoan
-    this.carLoan = carLoan
-    this.creditCard = creditCard
-    this.retail = retail
-    this.otherExpenses = otherExpenses
-    this.perChildExpense = perChildExpense
+    this.taxes = taxes;
+    this.homeMortgage = homeMortgage;
+    this.schoolLoan = schoolLoan;
+    this.carLoan = carLoan;
+    this.creditCard = creditCard;
+    this.retail = retail;
+    this.otherExpenses = otherExpenses;
+    this.perChildExpense = perChildExpense;
   }
 
   getTotalExpenses(): number {
-    return 0
+    return 0;
   }
 }
