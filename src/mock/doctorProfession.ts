@@ -1,6 +1,6 @@
 import { IFinancialStatementInit } from '@/core/game/financial-statemtnt/FinancialStatement';
 
-export const profession: IFinancialStatementInit = {
+export const doctorProfession: IFinancialStatementInit = {
   professionName: 'Врач',
   salary: 13200,
   savings: 400,

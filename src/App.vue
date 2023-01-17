@@ -1,7 +1,27 @@
 <script setup lang="ts">
-import RatRace from './components/URatRace.vue';
+import { ref } from 'vue';
+import UGame from '@/components/UGame.vue';
+
+const isRunning = ref(true);
 </script>
 
 <template>
-  <rat-race />
+  <div>
+    <button
+      v-if="!isRunning"
+      type="button"
+      @click="isRunning = true"
+    >
+      Play
+    </button>
+    <button
+      v-if="isRunning"
+      type="button"
+      @click="isRunning = false"
+    >
+      Stop
+    </button>
+
+    <UGame v-if="isRunning" />
+  </div>
 </template>

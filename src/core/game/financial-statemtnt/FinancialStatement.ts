@@ -8,7 +8,6 @@ import {
   ILiabilitiesInit,
   Liabilities,
 } from '@/core/game/financial-statemtnt/Liabilities';
-import { IFinancialStatement } from '@/models/financial-statement/IFinancialStatement';
 
 export interface IFinancialStatementInit {
   expenses: IExpensesInit;
@@ -18,7 +17,7 @@ export interface IFinancialStatementInit {
   savings: number;
 }
 
-export class FinancialStatement implements IFinancialStatement {
+export class FinancialStatement {
   professionName;
   totalIncome;
   totalExpenses;
@@ -27,6 +26,7 @@ export class FinancialStatement implements IFinancialStatement {
   assets: Assets;
   liabilities: Liabilities;
   expenses: Expenses;
+  cash;
 
   constructor({
     professionName,
@@ -46,6 +46,7 @@ export class FinancialStatement implements IFinancialStatement {
     this.totalExpenses = this.expenses.getTotalExpenses();
 
     this.payday = this.getPayday();
+    this.cash = this.assets.savings + this.payday;
   }
 
   getPayday(): number {

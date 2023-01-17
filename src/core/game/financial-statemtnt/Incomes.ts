@@ -1,13 +1,15 @@
-import { IIncomes } from '@/models/financial-statement/IIncomes';
-
-export class Incomes implements IIncomes {
+export class Incomes {
   interests = [];
   realEstate = [];
   business = [];
 
-  constructor(public salary = 0) {}
+  constructor(public readonly salary: number) {}
 
   getTotalIncome(): number {
+    return this.salary + this.getPassiveIncome();
+  }
+
+  getPassiveIncome(): number {
     return 0;
   }
 }

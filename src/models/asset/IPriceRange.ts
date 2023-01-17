@@ -1,4 +1,4 @@
 export interface IPriceRange {
-  from: number
-  to: number
+  from: number;
+  to: number;
 }

@@ -17,7 +17,8 @@
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:import/typescript",
-    "plugin:typescript-sort-keys/recommended"
+    "plugin:typescript-sort-keys/recommended",
+    "plugin:tailwindcss/recommended"
   ],
   "rules": {
     "@typescript-eslint/ban-types": "off",
@@ -71,13 +72,8 @@
       "error",
       "always-multiline"
     ],
-    "curly": "error",
     "eol-last": "error",
     "eqeqeq": "error",
-    "jsx-quotes": [
-      "error",
-      "prefer-single"
-    ],
     "no-case-declarations": "error",
     "no-console": [
       "warn",
@@ -129,14 +125,6 @@
     "vue/component-definition-name-casing": [
       "error",
       "kebab-case"
-    ],
-    "vue/component-name-in-template-casing": [
-      "error",
-      "kebab-case",
-      {
-        "registeredComponentsOnly": true,
-        "ignores": []
-      }
     ],
     "vue/eqeqeq": "error",
     "vue/html-quotes": [

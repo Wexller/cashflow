@@ -1,7 +1,6 @@
-import { IFastRace } from '../race/IFastRace';
-import { IRatRace } from '../race/IRatRace';
+import { FastRaceType, RatRaceType } from '@/models/IRace';
 
 export interface IBoard {
-  fastRace: IFastRace,
-  ratRace: IRatRace
+  fastRace: FastRaceType;
+  ratRace: RatRaceType;
 }

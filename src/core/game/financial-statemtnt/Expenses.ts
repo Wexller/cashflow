@@ -1,5 +1,3 @@
-import { IExpenses } from '@/models/financial-statement/IExpenses';
-
 export interface IExpensesInit {
   carLoan: number;
   creditCard: number;
@@ -11,14 +9,15 @@ export interface IExpensesInit {
   taxes: number;
 }
 
-export class Expenses implements IExpenses {
-  taxes;
-  homeMortgage;
-  schoolLoan;
-  carLoan;
-  creditCard;
-  retail;
-  otherExpenses;
+export class Expenses {
+  taxes: number;
+  homeMortgage: number;
+  schoolLoan: number;
+  carLoan: number;
+  creditCard: number;
+  retail: number;
+  otherExpenses: number;
+  childrenExpenses: number;
   perChildExpense;
   loan = null;
 
@@ -39,10 +38,19 @@ export class Expenses implements IExpenses {
     this.creditCard = creditCard;
     this.retail = retail;
     this.otherExpenses = otherExpenses;
+    this.childrenExpenses = 0;
     this.perChildExpense = perChildExpense;
   }
 
   getTotalExpenses(): number {
-    return 0;
+    return (
+      this.taxes +
+      this.homeMortgage +
+      this.schoolLoan +
+      this.carLoan +
+      this.creditCard +
+      this.retail +
+      this.otherExpenses
+    );
   }
 }

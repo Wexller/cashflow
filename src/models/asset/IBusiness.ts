@@ -1,11 +1,11 @@
 import { IAssetBase } from './IAsset';
 
 export interface IBusiness extends IAssetBase {
-  cashFlow: number,
-  downPay: number,
-  liability: number
-  price: number,
-  type: BusinessEnum
+  cashFlow: number;
+  downPay: number;
+  liability: number;
+  price: number;
+  type: BusinessEnum;
 }
 
 export enum BusinessEnum {
@@ -15,5 +15,5 @@ export enum BusinessEnum {
   MARKET,
   CAR_WASH,
   PIZZA,
-  FACTORY
+  FACTORY,
 }

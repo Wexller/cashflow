@@ -1,12 +1,15 @@
-import { FinancialStatement } from '@/core/game/financial-statemtnt/FinancialStatement';
-import { profession } from '@/mock/profession';
-import { IPlayer } from '@/models/IPlayer';
+import { FinancialStatement, IFinancialStatementInit } from '@/core/game/financial-statemtnt/FinancialStatement';
 
-export class Player implements IPlayer {
+export interface PlayerInit {
+  profession: IFinancialStatementInit
+}
+
+export class Player {
   financialStatement: FinancialStatement;
-  maxDices = 1;
+  maxDices: number = 1;
+  children: number = 0;
 
-  constructor() {
+  constructor({ profession }: PlayerInit) {
     this.financialStatement = new FinancialStatement(profession);
   }
 
