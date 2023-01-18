@@ -9,7 +9,7 @@ export class FastRace implements FastRaceType {
   }
 
   private generateRace(): IRaceField<FastRaceEnum>[] {
-    return fastRaceList.map((type) => ({ type }));
+    return fastRaceList.map((type) => ({ type, players: [] }));
   }
 
   getNewPosition(movement: number): number {

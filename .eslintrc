@@ -10,6 +10,7 @@
     "unused-imports"
   ],
   "extends": [
+    "plugin:prettier/recommended",
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
@@ -45,15 +46,7 @@
         "leadingUnderscore": "allowDouble"
       }
     ],
-    "@typescript-eslint/consistent-type-definitions": [
-      "error",
-      "interface"
-    ],
     "@typescript-eslint/explicit-function-return-type": "error",
-    "@typescript-eslint/indent": [
-      "error",
-      2
-    ],
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-inferrable-types": "off",
     "@typescript-eslint/no-unused-vars": [
@@ -122,10 +115,6 @@
       }
     ],
     "space-infix-ops": "error",
-    "vue/component-definition-name-casing": [
-      "error",
-      "kebab-case"
-    ],
     "vue/eqeqeq": "error",
     "vue/html-quotes": [
       "error",

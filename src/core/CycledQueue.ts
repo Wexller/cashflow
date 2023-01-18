@@ -5,8 +5,8 @@ export class CycledQueue<T> {
     items && this.addMany(items);
   }
 
-  first(): T | null {
-    return this.queue[0] || null;
+  first(): T {
+    return this.queue[0];
   }
 
   addOne(item: T): void {

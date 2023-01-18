@@ -1,27 +1,19 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import UGame from '@/components/UGame.vue';
+import UButton from '@/components/ui/UButton.vue';
 
 const isRunning = ref(true);
 </script>
 
 <template>
-  <div>
-    <button
-      v-if="!isRunning"
-      type="button"
-      @click="isRunning = true"
-    >
-      Play
-    </button>
-    <button
-      v-if="isRunning"
-      type="button"
-      @click="isRunning = false"
-    >
-      Stop
-    </button>
+  <div class="app">
+    <div class="mx-auto">
+      <div class="flex justify-center">
+        <UButton @click="isRunning = !isRunning"> Play/Stop </UButton>
+      </div>
 
-    <UGame v-if="isRunning" />
+      <UGame v-if="isRunning" />
+    </div>
   </div>
 </template>

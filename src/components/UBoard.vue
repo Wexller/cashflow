@@ -2,9 +2,9 @@
 import URatRace from '@/components/URatRace.vue';
 import { Board } from '@/core/game/board/Board';
 
-const props = defineProps({
-  board: Board,
-});
+const props = defineProps<{
+  board: Board;
+}>();
 </script>
 
 <template>

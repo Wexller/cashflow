@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  @apply bg-gray-700;
+html, body, #app {
+  @apply h-full;
+}
+
+.app {
+  @apply h-full pt-10;
+  background-image: url("/src/assets/images/background.png");
+  background-repeat: repeat;
 }

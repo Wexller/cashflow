@@ -1,4 +1,7 @@
+import { Player } from '@/core/game/Player';
+
 export interface IRaceField<T> {
+  players: Player[];
   type: T;
 }
 
@@ -11,13 +14,13 @@ export type RatRaceType = IRace<RatRaceEnum>;
 export type FastRaceType = IRace<FastRaceEnum>;
 
 export enum RatRaceEnum {
-  OPPORTUNITY,
-  MARKET,
-  CHARITY,
-  DOODADS,
-  PAYCHECK,
-  DOWNSIZE,
-  BABY,
+  BABY = 'BABY',
+  CHARITY = 'CHARITY',
+  DOODADS = 'DOODADS',
+  DOWNSIZE = 'DOWNSIZE',
+  MARKET = 'MARKET',
+  OPPORTUNITY = 'OPPORTUNITY',
+  PAYCHECK = 'PAYCHECK',
 }
 
 export enum FastRaceEnum {

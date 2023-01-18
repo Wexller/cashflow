@@ -1,3 +1,4 @@
+import eventBus from '@/core/EventBus';
 import { Assets } from '@/core/game/financial-statemtnt/Assets';
 import {
   Expenses,
@@ -8,6 +9,7 @@ import {
   ILiabilitiesInit,
   Liabilities,
 } from '@/core/game/financial-statemtnt/Liabilities';
+import { StatementEventsEnum } from '@/types/event-bus.types';
 
 export interface IFinancialStatementInit {
   expenses: IExpensesInit;
@@ -51,5 +53,19 @@ export class FinancialStatement {
 
   getPayday(): number {
     return this.totalIncome - this.totalExpenses;
+  }
+
+  isRatRace(): boolean {
+    return this.totalExpenses < this.totalIncome;
+  }
+
+  addCash(amount: number): void {
+    this.cash += amount;
+    eventBus.emit(StatementEventsEnum.STATEMENT_CHANGE);
+  }
+
+  subtractCash(amount: number): void {
+    this.cash -= amount;
+    eventBus.emit(StatementEventsEnum.STATEMENT_CHANGE);
   }
 }

@@ -1,23 +1,46 @@
-import { FinancialStatement, IFinancialStatementInit } from '@/core/game/financial-statemtnt/FinancialStatement';
+import eventBus from '@/core/EventBus';
+import {
+  FinancialStatement,
+  IFinancialStatementInit,
+} from '@/core/game/financial-statemtnt/FinancialStatement';
+import { PlayerEventsEnum } from '@/types/event-bus.types';
+import { rndNumberRange } from '@/utils/number';
 
 export interface PlayerInit {
-  profession: IFinancialStatementInit
+  name: string;
+  profession: IFinancialStatementInit;
 }
 
 export class Player {
+  name: string;
   financialStatement: FinancialStatement;
   maxDices: number = 1;
-  children: number = 0;
+  numberOfChildren: number = 0;
+  currentPosition: number = -1;
 
-  constructor({ profession }: PlayerInit) {
+  constructor({ name, profession }: PlayerInit) {
+    this.name = name;
     this.financialStatement = new FinancialStatement(profession);
   }
 
-  rollTheDice(numberOfDices: number): void {}
+  rollTheDice(numberOfDices: number): number {
+    const dices =
+      numberOfDices <= this.maxDices ? numberOfDices : this.maxDices;
 
-  borrowMoney(amount: number): void {}
+    const rolled = rndNumberRange(dices, dices * 6);
+    eventBus.emit(PlayerEventsEnum.ROLL_THE_DICE, rolled);
+    return rolled;
+  }
 
-  repayMoney(amount: number): void {}
+  borrowMoney(amount: number): number | void {
+    return amount;
+  }
 
-  endTurn(): void {}
+  repayMoney(amount: number): number | void {
+    return amount;
+  }
+
+  endTurn(): void {
+    return;
+  }
 }
